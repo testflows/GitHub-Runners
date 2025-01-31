@@ -9,3 +9,11 @@ addgroup docker
 usermod -aG wheel ubuntu
 usermod -aG sudo ubuntu
 usermod -aG docker ubuntu
+
+echo "Install fail2ban"
+apt-get update
+apt-get install --yes --no-install-recommends \
+    fail2ban 
+    
+echo "Launch fail2ban"
+systemctl start fail2ban
